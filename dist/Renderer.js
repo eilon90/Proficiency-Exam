@@ -1,6 +1,7 @@
 class Renderer{
     
     render(data) {
+        $('#recipes-container').empty();
         data.forEach(d => {
             const source = $('#recipes-template').html();
             const template = Handlebars.compile(source);

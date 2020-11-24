@@ -4,6 +4,7 @@ class APIManager {
     }
 
     getrecipe = (ingredient, func) => {
+        this.recipes = [];
         $.get(`/recipes/${ingredient}`, res => {
             const result = JSON.parse(res).results;
             const fixedData = result.map(r => {return {
