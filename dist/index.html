@@ -12,14 +12,17 @@
     <div id = "recipes-container"></div>
 
     <script id = "recipes-template" type = "text/x-handlebars-template">
-        <h2 class = "title"><a href = "{{href}}">{{title}}</a></h2>
-        <img class = "image" src="{{thumbnail}}"/>
-        <h3 class = "ingredients-title">Indgredients</h3>
-        <ul class="ingredients">
-            {{#each ingredients}}
-              <li>{{this}}</li>
-            {{/each}}
-          </ul>
+        <div class = "recipe">
+            <h2 class = "title"><a href = "{{href}}">{{title}}</a></h2>
+            <img class = "image" src="{{thumbnail}}"/>
+            <h3 class = "ingredients-title">Indgredients</h3>
+            <ul class="ingredients">
+                {{#each ingredients}}
+                <li>{{this}}</li>
+                {{/each}}
+            </ul>
+        </div>
+
           
     </script>
     
