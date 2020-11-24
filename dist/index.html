@@ -9,9 +9,23 @@
 <body>
     <input id = "input" type = "text">
     <button id = "button">Search!</button>
+    <div id = "recipes-container"></div>
+
+    <script id = "recipes-template" type = "text/x-handlebars-template">
+        <h2 class = "title"><a href = "{{href}}">{{title}}</a></h2>
+        <img class = "image" src="{{thumbnail}}"/>
+        <h3 class = "ingredients-title">Indgredients</h3>
+        <ul class="ingredients">
+            {{#each ingredients}}
+              <li>{{this}}</li>
+            {{/each}}
+          </ul>
+          
+    </script>
     
     <script src="./node_modules/jquery/dist/jquery.js"></script>
     <script src="./node_modules/handlebars/dist/handlebars.js"></script>
+    <script src="apiManager.js"></script>
     <script src="Renderer.js"></script>
     <script src="main.js"></script>
 
