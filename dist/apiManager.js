@@ -1,22 +1,15 @@
 class APIManager {
     constructor() {
-        this.recipes = [];
+        this.data = {
+            recipes: []
+        };
     }
 
     getrecipe = (ingredient, func) => {
-        this.recipes = [];
+        this.data.recipes = [];
         $.get(`/recipes/${ingredient}`, res => {
-            const result = JSON.parse(res).results;
-            const fixedData = result.map(r => {return {
-                ingredients: r.ingredients,
-                title: r.title,
-                thumbnail: r.thumbnail,
-                href: r.href
-            }});
-            fixedData.forEach(f => this.recipes.push(f));
-            func(this.recipes);
+            res.forEach(r => this.data.recipes.push(r));
+            func(this.data);
         })
     }
 }
-
-const apiManager = new APIManager;
