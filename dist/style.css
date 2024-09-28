@@ -1,0 +1,46 @@
+body {
+    background-color: grey;
+}
+
+
+ul {
+    column-count: 2;
+    margin: 0;
+}
+
+li {
+    margin-right: 2px;
+}
+
+h2 {
+    margin-right: 2px;
+}
+
+#container {
+    width: 100vw;
+}
+
+#recipes-container {
+    position: absolute;
+    top: 6vh;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 100%;
+    grid-gap: 4vw;
+}
+
+.recipe{
+    display: grid;
+    height: 50vh;
+    width: 100%;
+    background-color: sandybrown;
+    box-shadow: 2px 2px 6px;
+}
+
+.image {
+    width: 30%;
+    position: relative;
+    margin: auto 0;
+    cursor: pointer;
+    justify-self: center;
+}
